@@ -1,0 +1,32 @@
+<<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Alertas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='painel.js') }}"></script>
+</head>
+<body>
+  <h2>Categorias mais engajadas</h2>
+
+  <!-- Filtro de categorias -->
+  <div class="filtro-container">
+    <input type="text" id="filtroCategoria" placeholder="Filtrar por categoria..." />
+    <button id="limparFiltro">Limpar</button>
+  </div>
+
+  <!-- Cards renderizados dinamicamente -->
+  <div id="alertas"></div>
+
+  <!-- Gráfico de barras -->
+  <canvas id="graficoCategorias" width="400" height="200"></canvas>
+
+  <!-- Ações -->
+  <div class="acoes-container">
+    <button id="toggleDark">Modo Escuro</button>
+    <button id="exportarCSV">Exportar CSV</button>
+  </div>
+
+  <!-- Script principal -->
+</body>
+</html>

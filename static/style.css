@@ -1,0 +1,52 @@
+.alert-card {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  font-family: Arial;
+  display: flex;
+  justify-content: space-between;
+}
+.alert-card.top {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+  .alert-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.alert-card {
+  transition: transform 0.3s ease;
+}
+.alert-card:hover {
+  transform: scale(1.02);
+}
+#alertas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.alert-card {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #333;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.alert-card.dark-mode {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
