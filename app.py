@@ -38,7 +38,7 @@ app.register_blueprint(ofertas_bp, url_prefix="/ofertas")
 app.register_blueprint(admin_bp, url_prefix="/admin")
 app.register_blueprint(produto_bp, url_prefix="/produto")
 
-# 📤 Serviço de envio ao Telegram (importado do módulo separado)
+# 📤 Serviço de envio ao Telegram
 from services.telegram import enviar_mensagem, enviar_foto
 
 # 🧪 Rotas de teste do bot
@@ -63,8 +63,7 @@ def painel():
 def home():
     return redirect("/painel")
 
-# 🏁 Executa o app
+# 🏁 Executa o app (Railway/Render/Heroku usam PORT do ambiente)
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    print(app.url_map)
     app.run(host="0.0.0.0", port=port)

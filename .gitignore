@@ -6,7 +6,32 @@ ENV/
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 
-# Configurações locais
+# Configurações locais e sensíveis
 *.env
 *.log
+
+# Banco de dados SQLite
+*.sqlite3
+*.db
+
+# Arquivos de migração compilados
+migrations/versions/__pycache__/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Arquivos temporários e de sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+git add .gitignore
+git commit -m "Complementa .gitignore com regras adicionais"
+git push
+git rm -r --cached venv __pycache__ *.pyc *.pyo *.pyd *.log *.env *.sqlite3 *.db .vscode/ .idea/ migrations/versions/__pycache__/
+
